@@ -20,10 +20,10 @@ function SingleMoviePage() {
             </div>
             <DetailedGallery></DetailedGallery>
             <DetailedTrailer></DetailedTrailer>
-            <SimilarMovies></SimilarMovies>
-            <DetailedComments></DetailedComments>
           </div>
         </div>
+        <SimilarMovies></SimilarMovies>
+        <DetailedComments></DetailedComments>
       </div>
     </div>
   );
