@@ -5,6 +5,8 @@ import ErrorBoundary from './components/error-boundary';
 import Navigation from './components/navigation/navigation';
 import AuthPage from './pages/auth/auth-page';
 import MainPage from './pages/mainPage';
+import SingleMoviePage from './pages/singleMoviePage/single-movie-page';
+
 function App() {
   return (
     <ErrorBoundary>
@@ -14,8 +16,7 @@ function App() {
           <MainPage></MainPage>
         </Route>
         <Route path="/wishlist">
-          <MainPage></MainPage>
-          <MainPage></MainPage>
+          <SingleMoviePage></SingleMoviePage>
         </Route>
         <Route path="/auth">
           <AuthPage></AuthPage>
