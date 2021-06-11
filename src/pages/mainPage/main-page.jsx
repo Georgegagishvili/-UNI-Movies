@@ -8,25 +8,32 @@ function MainPage() {
       <div className="genre-wrapper">
         <GenreCard
           genre_name="კომედია"
-          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"></GenreCard>
+          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"
+        />
         <GenreCard
           genre_name="კომედია"
-          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"></GenreCard>
+          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"
+        />
         <GenreCard
           genre_name="კომედია"
-          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"></GenreCard>
+          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"
+        />
         <GenreCard
           genre_name="კომედია"
-          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"></GenreCard>
+          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"
+        />
         <GenreCard
           genre_name="კომედია"
-          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"></GenreCard>
+          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"
+        />
         <GenreCard
           genre_name="კომედია"
-          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"></GenreCard>
+          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"
+        />
         <GenreCard
           genre_name="კომედია"
-          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"></GenreCard>
+          img="https://pngimg.com/uploads/triangle/triangle_PNG30.png"
+        />
       </div>
     </div>
   );

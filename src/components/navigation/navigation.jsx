@@ -24,7 +24,7 @@ function Navigation() {
       <ul class="navbar-ul">
         {/* <!-- MAIN TITLE --> */}
         <li class="nav-title">
-          <a href="index.html">YOUR-MOVIES</a>
+          <a href="/">YOUR-MOVIES</a>
         </li>
         {/* <!-- MAIN TITLE --> */}
         {/* <!-- SEARCH --> */}
@@ -56,7 +56,7 @@ function Navigation() {
           </NavLink>
         </li>
         <li class="nav-item">
-          <NavLink class="nav-link" to="/wishlist">
+          <NavLink class="nav-link" to="/wishlist?id=8462">
             სურვილები
           </NavLink>
         </li>

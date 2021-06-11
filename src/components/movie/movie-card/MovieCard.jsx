@@ -1,17 +1,26 @@
+import { useHistory } from 'react-router-dom';
 import './movieCardStyle.css';
-function MovieCard() {
+function MovieCard({ title, year, rating, genres, id, cover }) {
+  let history = useHistory();
+  const redirect = () => {
+    history.push('/wishlist?id=' + id);
+    window.location.reload();
+  };
   return (
     <div class="movie-single">
       <div class="movie-single-img-wrapper">
-        <img src="http://placehold.it/200x305" />
+        <img src={cover} alt={title} />
         <span class="movie-single-star">★</span>
-        <span class="movie-single-rating">6.9/10</span>
-        <span class="movie-single-category">კატეგორია</span>
-        <button class="movie-single-button">სრულად ნახვა</button>
+        <span class="movie-single-rating">{rating}/10</span>
+        <span class="movie-single-category">{genres.join(', ')}</span>
+
+        <button className="movie-single-button" onClick={redirect}>
+          სრულად ნახვა
+        </button>
       </div>
       <div class="movie-single-properties">
-        <span>ფილმის სახელი</span>
-        <span>კატეგორია</span>
+        <span>{title}</span>
+        <span>{year}</span>
       </div>
     </div>
   );

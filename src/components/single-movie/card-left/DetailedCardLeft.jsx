@@ -1,10 +1,9 @@
-function CardLeft() {
+function CardLeft({ cover, imdb_code }) {
   return (
     <div className="card-left">
-      <a id="imdbLink">
-        <img id="cover" src="http://placehold.it/400x500" />
+      <a href={`https://www.imdb.com/title/${imdb_code}`} id="imdbLink">
+        <img id="cover" src={cover.toString()} />
       </a>
-      <button id="save">...</button>
     </div>
   );
 }

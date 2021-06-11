@@ -12,14 +12,14 @@ function App() {
     <ErrorBoundary>
       <Navigation></Navigation>
       <Switch>
-        <Route path="/detailed_search">
-          <MainPage></MainPage>
-        </Route>
         <Route path="/wishlist">
           <SingleMoviePage></SingleMoviePage>
         </Route>
         <Route path="/auth">
           <AuthPage></AuthPage>
+        </Route>
+        <Route path="/">
+          <MainPage></MainPage>
         </Route>
       </Switch>
     </ErrorBoundary>

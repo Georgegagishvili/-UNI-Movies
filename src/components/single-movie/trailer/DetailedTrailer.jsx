@@ -1,9 +1,10 @@
-function DetailedTrailer() {
+function DetailedTrailer({ code }) {
   return (
     <div class="video-wrapper">
       <span>ტრეილერი:</span>
       <div class="video-player">
         <iframe
+          src={`https://www.youtube.com/embed/${code}?autoplay=0`}
           id="ytplayer"
           name="ytplayer"
           type="text/html"
