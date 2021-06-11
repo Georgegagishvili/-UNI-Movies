@@ -54,7 +54,7 @@
 
 /*MOVIE WRAPPER*/
 .movie-wrapper {
-  max-width: 1350px;
+  max-width: 1200px;
   margin-top: 20px;
   display: flex;
   justify-content: flex-start;
@@ -109,6 +109,7 @@
   overflow-x: hidden;
   scroll-behavior: smooth;
   align-items: center;
+  overflow-x: scroll;
 }
 .movie-scroll-wrapper {
   width: 78%;

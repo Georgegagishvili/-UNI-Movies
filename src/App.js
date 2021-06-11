@@ -13,17 +13,17 @@ function App() {
     <ErrorBoundary>
       <Navigation></Navigation>
       <Switch>
-        <Route path="/wishlist">
-          <SingleMoviePage></SingleMoviePage>
+        <Route path="/movie">
+          <SingleMoviePage />
         </Route>
         <Route path="/auth">
           <AuthPage></AuthPage>
         </Route>
         <Route path="/detailed_search">
-          <DetailedSearchPage></DetailedSearchPage>
+          <DetailedSearchPage />
         </Route>
         <Route path="/">
-          <MainPage></MainPage>
+          <MainPage />
         </Route>
       </Switch>
     </ErrorBoundary>

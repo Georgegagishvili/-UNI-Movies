@@ -56,7 +56,7 @@ function Navigation() {
           </NavLink>
         </li>
         <li class="nav-item">
-          <NavLink class="nav-link" to="/wishlist?id=8462">
+          <NavLink class="nav-link" to="/movie?id=8462">
             სურვილები
           </NavLink>
         </li>

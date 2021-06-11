@@ -28,26 +28,14 @@ function SimilarMovies({ id, movie }) {
 
   useEffect(() => {
     fetchData();
-  }, [movie]);
+  }, []);
 
   return (
     <div class="movie-wrapper">
       <span>მსგავსი ფილმები:</span>
       {/* <!-- SINGLE MOVIE WRAPPER --> */}
       <div id="suggestions" class="movie-single-wrapper">
-        {movies &&
-          movies.map((movie, index) => (
-            <div>
-              <MovieCard
-                title={movie.title}
-                year={movie.year}
-                rating={movie.rating}
-                genres={movie.genres}
-                id={movie.id}
-                cover={movie.medium_cover_image}
-              />
-            </div>
-          ))}
+        {movies && movies.map((movie) => <MovieCard movie={movie} />)}
       </div>
       {/* <!-- SINGLE MOVIE WRAPPER --> */}
     </div>

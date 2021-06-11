@@ -1,5 +1,6 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useHistory } from 'react';
+import { browserHistory } from 'react-router';
 
 import DetailedCardLeft from '../../components/single-movie/card-left/DetailedCardLeft';
 import DetailedCardRight from '../../components/single-movie/card-right/DetailedCardRight';
@@ -9,12 +10,10 @@ import SimilarMovies from '../../components/single-movie/similar-movies/SimilarM
 import DetailedComments from '../../components/single-movie/comments/DetailedComments';
 import './singleMovieStyle.css';
 function SingleMoviePage() {
-  const [entry] = performance.getEntriesByType('navigation');
+  window.onpopstate = function () {
+    window.location.reload();
+  };
 
-  // Show it in a nice table in the developer console
-  console.table(entry.toJSON());
-
-  if (entry['type'] === 'back_forward') window.location.reload();
   document.title = 'Loading...';
   const query_string = window.location.search;
   const url_params = new URLSearchParams(query_string);
@@ -70,7 +69,7 @@ function SingleMoviePage() {
                 genres={movie.genres}
                 description={movie.description_full}
                 rating={movie.rating}
-                likes={movie.likes}
+                likes={movie.like_count}
                 runtime={movie.runtime}
                 torrents={movie.torrents}
               />
