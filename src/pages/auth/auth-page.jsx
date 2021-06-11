@@ -1,5 +1,9 @@
+import React from 'react';
+
 import './authStyle.css';
+
 function AuthPage() {
+  document.title = 'Auth';
   return (
     <div class="main-wrapper">
       <div class="card-wrapper">

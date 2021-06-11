@@ -3,24 +3,27 @@ import './movieCardStyle.css';
 function MovieCard({ title, year, rating, genres, id, cover }) {
   let history = useHistory();
   const redirect = () => {
-    history.push('/wishlist?id=' + id);
+    history.push('/wishlist?id=');
     window.location.reload();
   };
   return (
     <div class="movie-single">
       <div class="movie-single-img-wrapper">
-        <img src={cover} alt={title} />
+        <img
+          src="http://placehold.it/200x305"
+          alt="http://placehold.it/200x305"
+        />
         <span class="movie-single-star">★</span>
-        <span class="movie-single-rating">{rating}/10</span>
-        <span class="movie-single-category">{genres.join(', ')}</span>
+        <span class="movie-single-rating">{}/10</span>
+        <span class="movie-single-category">წელიწადი</span>
 
         <button className="movie-single-button" onClick={redirect}>
           სრულად ნახვა
         </button>
       </div>
       <div class="movie-single-properties">
-        <span>{title}</span>
-        <span>{year}</span>
+        <span>ფილმის სახელი{}</span>
+        <span>წელიწადი{}</span>
       </div>
     </div>
   );

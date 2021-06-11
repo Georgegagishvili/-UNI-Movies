@@ -6,6 +6,7 @@ import Navigation from './components/navigation/navigation';
 import AuthPage from './pages/auth/auth-page';
 import MainPage from './pages/mainPage';
 import SingleMoviePage from './pages/singleMoviePage/single-movie-page';
+import DetailedSearchPage from './pages/detailedSearchPage/detailed-search-page';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/auth">
           <AuthPage></AuthPage>
+        </Route>
+        <Route path="/detailed_search">
+          <DetailedSearchPage></DetailedSearchPage>
         </Route>
         <Route path="/">
           <MainPage></MainPage>

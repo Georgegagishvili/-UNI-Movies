@@ -5,10 +5,6 @@ html {
 .movie-single-properties span {
   color: white !important;
 }
-.movie-single-wrapper {
-  background: #0d344d;
-  border-radius: 15px;
-}
 
 /*BLURNESS*/
 .main-background {
