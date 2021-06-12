@@ -54,41 +54,44 @@ function SingleMoviePage() {
   }, []);
 
   return (
-    <div className="detailed-body-wrapper">
-      {movie && (
-        <div className="main-body-wrapper">
-          <div className="movie-header">
-            <div className="top-details">
-              <DetailedCardLeft
-                cover={movie.medium_cover_image}
-                imdb_code={movie.imdb_code}
-              />
-              <DetailedCardRight
-                title={movie.title}
-                year={movie.year}
-                genres={movie.genres}
-                description={movie.description_full}
-                rating={movie.rating}
-                likes={movie.like_count}
-                runtime={movie.runtime}
-                torrents={movie.torrents}
-              />
-              <div class="actors">
-                {/* <span>მსახიობები:</span> */}
-                <div id="actors" className="actors-list"></div>
+    <div>
+      <div className="main-background"></div>
+      <div className="detailed-body-wrapper">
+        {movie && (
+          <div className="main-body-wrapper">
+            <div className="movie-header">
+              <div className="top-details">
+                <DetailedCardLeft
+                  cover={movie.medium_cover_image}
+                  imdb_code={movie.imdb_code}
+                />
+                <DetailedCardRight
+                  title={movie.title}
+                  year={movie.year}
+                  genres={movie.genres}
+                  description={movie.description_full}
+                  rating={movie.rating}
+                  likes={movie.like_count}
+                  runtime={movie.runtime}
+                  torrents={movie.torrents}
+                />
+                <div class="actors">
+                  {/* <span>მსახიობები:</span> */}
+                  <div id="actors" className="actors-list"></div>
+                </div>
+                <DetailedGallery
+                  img1={movie.large_screenshot_image1}
+                  img2={movie.large_screenshot_image2}
+                  img3={movie.large_screenshot_image3}
+                />
+                <DetailedTrailer code={movie.yt_trailer_code} />
               </div>
-              <DetailedGallery
-                img1={movie.large_screenshot_image1}
-                img2={movie.large_screenshot_image2}
-                img3={movie.large_screenshot_image3}
-              />
-              <DetailedTrailer code={movie.yt_trailer_code} />
             </div>
+            <SimilarMovies id={id} />
+            <DetailedComments id={id} />
           </div>
-          <SimilarMovies id={id} />
-          <DetailedComments id={id} />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
