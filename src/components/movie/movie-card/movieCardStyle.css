@@ -70,8 +70,8 @@
 }
 .movie-single-button:hover {
   transition: 0.5s;
-  color: #f95700ff !important;
-  background: #00a4ccff;
+  color: white !important;
+  background: #7374ff;
 }
 
 /*Movie Details(Category + Title)*/

@@ -24,7 +24,7 @@ function Navigation() {
       <ul class="navbar-ul">
         {/* <!-- MAIN TITLE --> */}
         <li class="nav-title">
-          <a href="/">YOUR-MOVIES</a>
+          <a href="/"> ReactMovies</a>
         </li>
         {/* <!-- MAIN TITLE --> */}
         {/* <!-- SEARCH --> */}

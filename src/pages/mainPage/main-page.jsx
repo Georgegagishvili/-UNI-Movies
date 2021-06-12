@@ -4,6 +4,8 @@ import MovieCard from '../../components/movie/movie-card/MovieCard';
 import MovieWrapper from '../../components/main-page/movie-wrapper';
 import GenreWrapper from '../../components/main-page/genre-wrapper';
 
+import Banner from '../../components/main-page/banner/Banner';
+
 import './mainpage.css';
 
 function MainPage() {
@@ -113,6 +115,8 @@ function MainPage() {
 
   return (
     <div className="body-wrapper">
+      <div className="main-background"></div>
+      <Banner></Banner>
       <MovieWrapper film_type="პოპულარული:" onClick={function name(params) {}}>
         {topMovies && topMovies.map((movie) => <MovieCard movie={movie} />)}
       </MovieWrapper>
