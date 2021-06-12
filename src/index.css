@@ -1,3 +1,9 @@
+@import url('//cdn.web-fonts.ge/fonts/bpg-glaho-web-caps/css/bpg-glaho-web-caps.min.css');
+@import url('//cdn.web-fonts.ge/fonts/bpg-glaho/css/bpg-glaho.min.css');
+@import url('//cdn.web-fonts.ge/fonts/bpg-nino-mtavruli/css/bpg-nino-mtavruli.min.css');
+@import url('//cdn.web-fonts.ge/fonts/bpg-web-001/css/bpg-web-001.min.css');
+@import url('//cdn.web-fonts.ge/fonts/bpg-web-001-caps/css/bpg-web-001-caps.min.css');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

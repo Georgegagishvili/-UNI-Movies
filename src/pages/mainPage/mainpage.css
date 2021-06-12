@@ -157,13 +157,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 .footer-bottom span {
   color: #fed700;
 }
 .footer-bottom span:nth-child(1) {
-  font-family: 'BPG Arial';
+  font-family: 'BPG GLAHO WEB' !important;
 }
 .footer-bottom span:nth-child(5) {
   font-family: 'Fredoka One';

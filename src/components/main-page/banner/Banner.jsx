@@ -1,10 +1,10 @@
 import './bannerStyle.css';
-function Banner() {
+function Banner({ img }) {
   return (
     <div
       className="main-banner"
       style={{
-        backgroundImage: "url('https://bit.ly/3iBGEkE')",
+        backgroundImage: `url("${img}")`,
       }}>
       <div className="blurry-banner"></div>
       <div className="banner-info">

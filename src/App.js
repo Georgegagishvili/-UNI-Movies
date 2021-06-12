@@ -3,10 +3,13 @@ import { Route } from 'react-router-dom/cjs/react-router-dom.min';
 
 import ErrorBoundary from './components/error-boundary';
 import Navigation from './components/navigation/navigation';
+import Footer from './components/footer/Footer';
 import AuthPage from './pages/auth/auth-page';
 import MainPage from './pages/mainPage';
 import SingleMoviePage from './pages/singleMoviePage/single-movie-page';
 import DetailedSearchPage from './pages/detailedSearchPage/detailed-search-page';
+
+import './index.css';
 
 function App() {
   return (
@@ -26,6 +29,7 @@ function App() {
           <MainPage />
         </Route>
       </Switch>
+      <Footer></Footer>
     </ErrorBoundary>
   );
 }

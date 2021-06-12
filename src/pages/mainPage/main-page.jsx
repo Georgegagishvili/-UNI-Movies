@@ -116,7 +116,7 @@ function MainPage() {
   return (
     <div className="body-wrapper">
       <div className="main-background"></div>
-      <Banner></Banner>
+      <Banner img="https://bit.ly/3iBGEkE"></Banner>
       <MovieWrapper film_type="პოპულარული:" onClick={function name(params) {}}>
         {topMovies && topMovies.map((movie) => <MovieCard movie={movie} />)}
       </MovieWrapper>
