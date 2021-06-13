@@ -254,7 +254,7 @@ body {
   margin: 20px;
 }
 .horizontal-images img {
-  transition: 2s ease;
+  transition: 0.5s ease;
   position: relative;
   object-fit: fill;
   width: 350px;
@@ -265,8 +265,8 @@ body {
 .horizontal-images img:hover {
   position: relative;
   z-index: 32;
-  transform: scale(3, 2);
-  transition: 2s ease;
+  transform: scale(1.5, 1.5);
+  transition: 0.5s ease;
 }
 /*VIDEO*/
 .video-wrapper {

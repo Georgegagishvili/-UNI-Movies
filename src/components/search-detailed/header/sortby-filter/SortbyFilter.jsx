@@ -1,14 +1,23 @@
-function SortbyFilter() {
+import { sortByArrayGeo } from '../../../../variables';
+
+function SortbyFilter({ query, setQuery }) {
+  const updateQuery = (value) => {
+    let tmpQuery = query;
+    tmpQuery.sort_by = value;
+    setQuery(tmpQuery);
+  };
+
   return (
     <div class="filter-single">
       <label for="sortby">თანმიმდევრობა</label>
-      <select id="sortBy" name="sortby" onchange="searchFilter()">
-        <option value={0}>თარიღი</option>
-        <option value={1}>სახელი</option>
-        <option value={2}>წელი</option>
-        <option value={3}>შეფასება</option>
-        <option value={4}>გადმოწერები</option>
-        <option value={5}>მოწონებები</option>
+      <select
+        name="sortby"
+        onChange={({ target }) => updateQuery(target.value)}>
+        {sortByArrayGeo.map((option, index) => (
+          <option value={index} selected={query.sort_by == index && 'selected'}>
+            {option}
+          </option>
+        ))}
       </select>
     </div>
   );

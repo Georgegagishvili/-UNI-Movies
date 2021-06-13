@@ -1,9 +1,9 @@
 import { Link, useHistory } from 'react-router-dom';
 import './genreStyle.css';
 
-function GenreCard({ genre, name }) {
+function GenreCard({ genre, name, index }) {
   return (
-    <Link to={`/search?genre=${genre}`}>
+    <Link to={`/search?genre=${index}`}>
       <div class="genre-single">
         <img
           style={{

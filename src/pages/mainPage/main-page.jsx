@@ -3,69 +3,12 @@ import GenreCard from '../../components/movie/genre-card/genreCard';
 import MovieCard from '../../components/movie/movie-card/MovieCard';
 import MovieWrapper from '../../components/main-page/movie-wrapper';
 import GenreWrapper from '../../components/main-page/genre-wrapper';
-
 import Banner from '../../components/main-page/banner/Banner';
 
+import { genresArray, genresArrayGeo } from '../../variables';
 import './mainpage.css';
 
 function MainPage() {
-  var genresArray = [
-    'comedy',
-    'sci-fi',
-    'horror',
-    'romance',
-    'action',
-    'thriller',
-    'mystery',
-    'crime',
-    'animation',
-    'adventure',
-    'fantasy',
-    'drama',
-    'history',
-    'biography',
-    'documentary',
-    'family',
-    'film-noir',
-    'game-show',
-    'music',
-    'musical',
-    'news',
-    'reality-tv',
-    'sport',
-    'war',
-    'talk-show',
-    'western',
-  ];
-  var genresArrayGeo = [
-    'კომედია',
-    'სამეცნიერო ფანტასტიკა',
-    'საშინელებათა',
-    'რომანტიკა',
-    'ექშენი',
-    'თრილერი',
-    'მისტიკა',
-    'კრიმინალი',
-    'ანიმაცია',
-    'სათავგადასავლო',
-    'ფანტასტიკა',
-    'დრამა',
-    'ისტორია',
-    'ბიოგრაფია',
-    'დოკუმენტალური',
-    'საოჯახო',
-    'ფილმ-ნოირი',
-    'გეიმ-შოუ',
-    'მუსიკა',
-    'მუსიკალური',
-    'სიახლეები',
-    'რეალითი-ტივი',
-    'სპორტი',
-    'ომი',
-    'თალქ-შოუ',
-    'ვესტერნი',
-  ];
-
   const [topMovies, setTopMovies] = useState(null);
   const [newMovies, setNewMovies] = useState(null);
   const [bestMovies, setBestMovies] = useState(null);
@@ -117,13 +60,17 @@ function MainPage() {
     <div className="body-wrapper">
       <div className="main-background"></div>
       <Banner img="https://bit.ly/3iBGEkE"></Banner>
-      <MovieWrapper film_type="პოპულარული:" onClick={function name(params) {}}>
+      <MovieWrapper film_type="პოპულარული:">
         {topMovies && topMovies.map((movie) => <MovieCard movie={movie} />)}
       </MovieWrapper>
 
       <GenreWrapper title="ჟანრები:">
         {genresArrayGeo.map((genre, index) => (
-          <GenreCard genre={genresArray[index]} name={genre} />
+          <GenreCard
+            genre={genresArray[index + 1]}
+            name={genre}
+            index={index + 1}
+          />
         ))}
       </GenreWrapper>
 
@@ -131,7 +78,7 @@ function MainPage() {
         {newMovies && newMovies.map((movie) => <MovieCard movie={movie} />)}
       </MovieWrapper>
 
-      <MovieWrapper film_type="შემთხვევითი:" onClick={function name(params) {}}>
+      <MovieWrapper film_type="შემთხვევითი:">
         {randomMovies &&
           randomMovies.map((movie) => <MovieCard movie={movie} />)}
       </MovieWrapper>

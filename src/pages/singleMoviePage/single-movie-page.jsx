@@ -91,6 +91,7 @@ function SingleMoviePage() {
             <DetailedComments id={id} />
           </div>
         )}
+        {window.scrollTo(0, 0)}
       </div>
     </div>
   );

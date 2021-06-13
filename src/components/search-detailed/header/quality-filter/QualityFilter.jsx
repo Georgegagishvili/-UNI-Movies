@@ -1,13 +1,24 @@
-function QualityFilter() {
+import { qualitiesArrayGeo } from '../../../../variables';
+
+function QualityFilter({ query, setQuery }) {
+  const updateQuery = (value) => {
+    let tmpQuery = query;
+    tmpQuery.quality = value;
+    setQuery(tmpQuery);
+  };
+
   return (
     <div className="filter-single">
       <label for="quality">ხარისხი</label>
-      <select id="quality" name="quality" onchange="searchFilter()">
-        <option value={0}>ყველა</option>
-        <option value={1}>720p</option>
-        <option value={2}>1080p</option>
-        <option value={3}>2160p</option>
-        <option value={4}>3D</option>
+      <select
+        defaultValue={query.quality}
+        name="quality"
+        onChange={({ target }) => updateQuery(target.value)}>
+        {qualitiesArrayGeo.map((option, index) => (
+          <option value={index} selected={query.quality == index && 'selected'}>
+            {option}
+          </option>
+        ))}
       </select>
     </div>
   );

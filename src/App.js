@@ -22,7 +22,7 @@ function App() {
         <Route path="/auth">
           <AuthPage></AuthPage>
         </Route>
-        <Route path="/detailed_search">
+        <Route path="/search">
           <DetailedSearchPage />
         </Route>
         <Route path="/">

@@ -51,7 +51,7 @@ function Navigation() {
 
         {/* <!-- NAV ITEMS --> */}
         <li class="nav-item">
-          <NavLink class="nav-link" to="/detailed_search">
+          <NavLink class="nav-link" to="/search">
             ფილმები
           </NavLink>
         </li>

@@ -1,5 +1,6 @@
 import { Link, useHistory } from 'react-router-dom';
 import './movieCardStyle.css';
+
 function MovieCard({ movie }) {
   let history = useHistory();
   const redirect = () => {

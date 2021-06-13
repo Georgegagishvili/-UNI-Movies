@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './bannerStyle.css';
 function Banner({ img }) {
   return (
@@ -14,7 +15,9 @@ function Banner({ img }) {
             შურისმაძიებლები: უსასრულობის ომი
           </span>
           <span className="banner-title-english">Avengers: Infinity War</span>
-          <button className="watch-featured">უყურე</button>
+          <button className="watch-featured">
+            <Link to={'/movie?id=8462'}>უყურე</Link>
+          </button>
         </div>
       </div>
     </div>
