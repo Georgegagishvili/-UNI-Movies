@@ -84,6 +84,7 @@
 .movie-single-properties span,
 p {
   color: white;
+  line-height: 16px;
   margin-left: 3px;
   font-family: 'BPG Nino Mtavruli';
 }

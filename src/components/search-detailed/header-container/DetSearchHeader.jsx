@@ -28,7 +28,7 @@ function DetSearchHeader({ query, setQuery, filter, clear }) {
           <RatingFilter query={query} setQuery={setQuery} />
           <OrderbyFilter query={query} setQuery={setQuery} />
           <SortbyFilter query={query} setQuery={setQuery} />
-          <button onClick={clear}>clear</button>
+          <button onClick={clear}>გასუფთავება</button>
         </div>
       </div>
     </div>

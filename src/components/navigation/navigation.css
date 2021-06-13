@@ -4,7 +4,7 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
+  color: white !important;
 }
 li,
 ul,
@@ -46,7 +46,7 @@ a {
 }
 .nav-item a:hover {
   transition: 1s ease;
-  color: #fee715ff;
+  color: #fee715ff !important;
 }
 .navbar-ul {
   height: 100%;

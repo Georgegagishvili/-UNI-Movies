@@ -2,6 +2,9 @@ body {
   padding: 0px;
   margin: 0px;
 }
+.detailed-body-wrapper p::-webkit-scrollbar {
+  display: none !important;
+}
 ::-webkit-scrollbar {
   height: 5px;
   width: 1px;
@@ -256,7 +259,7 @@ body {
 .horizontal-images img {
   transition: 0.5s ease;
   position: relative;
-  object-fit: fill;
+  object-fit: contain;
   width: 350px;
   z-index: 1;
   height: 250px;

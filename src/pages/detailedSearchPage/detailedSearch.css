@@ -24,10 +24,17 @@
 .filter-wrapper {
   width: 100%;
 }
+.filter-wrapper button {
+  border: none;
+  height: 30px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-family: 'BPG GLAHO WEB';
+}
 .search-form span {
   width: 100%;
   text-align: left;
-  font-family: 'BPG Arial';
+  font-family: 'BPG WEB 001 CAPS';
   font-size: 20px;
   margin-bottom: 10px;
   color: white;
@@ -51,12 +58,13 @@
   flex-direction: column;
 }
 .filter-single label {
-  font-family: 'BPG Arial';
+  font-family: 'BPG GLAHO WEB';
   font-size: 15px;
   color: white;
   margin-bottom: 5px;
 }
 .filter-single select {
+  font-family: 'BPG GLAHO WEB';
   border: none;
   border-radius: 5px;
   width: 100px;
@@ -70,16 +78,19 @@
 }
 .search-term button {
   height: 38px;
-  font-family: 'BPG Web 001';
-  background: #3d58a6;
+  font-family: 'BPG WEB 001 CAPS';
+  background: #005296;
   color: white;
   font-size: 18px;
   border-radius: 5px;
   margin-left: 20px;
   border: none;
   width: 25%;
+  transition: 0.3s;
 }
-
+.search-term button:hover {
+  background: #7374ff;
+}
 .pagination {
   display: flex;
   flex-wrap: wrap;
@@ -104,7 +115,7 @@
   height: 40px;
   color: white;
   vertical-align: middle;
-  font-family: 'Roboto';
+  font-family: 'BPG WEB 001 CAPS';
   font-weight: 700;
   border: 1px solid #055479;
 }
