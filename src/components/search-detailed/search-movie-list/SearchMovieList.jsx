@@ -1,13 +1,19 @@
 import { useEffect, useState } from 'react';
 import MovieCard from '../../movie/movie-card/MovieCard';
 import './SearchSingleMovie.css';
-function SearchMovieList({ query = '' }) {
+function SearchMovieList({ queryString = '' }) {
   const [movies, setMovies] = useState(null);
 
+  const [message, setMessage] = useState(null);
+
   const fetchData = () => {
-    fetch('https://yts.mx/api/v2/list_movies.json?' + query + '&limit=24', {
-      method: 'GET',
-    })
+    setMessage('Loading...');
+    fetch(
+      'https://yts.mx/api/v2/list_movies.json?' + queryString + '&limit=24',
+      {
+        method: 'GET',
+      }
+    )
       .then(function (response) {
         if (response.status !== 200) {
           throw response.status;
@@ -15,7 +21,12 @@ function SearchMovieList({ query = '' }) {
         return response.json();
       })
       .then(function (responseData) {
-        setMovies(responseData.data.movies);
+        if (responseData.data.movies) {
+          setMovies(responseData.data.movies);
+          setMessage(null);
+        } else {
+          setMessage('No Results :(');
+        }
       })
       .catch(function (error) {
         if (error === 404) {
@@ -34,6 +45,7 @@ function SearchMovieList({ query = '' }) {
   return (
     <div class="detailed-search-movies">
       <div id="results" class="movie-single-wrapper">
+        {message && <p>{message}</p>}
         {movies && movies.map((movie) => <MovieCard movie={movie} />)}
       </div>
     </div>

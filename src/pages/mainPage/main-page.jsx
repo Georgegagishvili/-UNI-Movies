@@ -9,6 +9,8 @@ import { genresArray, genresArrayGeo } from '../../variables';
 import './mainpage.css';
 
 function MainPage() {
+  document.title = 'React Movies';
+
   const [topMovies, setTopMovies] = useState(null);
   const [newMovies, setNewMovies] = useState(null);
   const [bestMovies, setBestMovies] = useState(null);

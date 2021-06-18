@@ -1,6 +1,5 @@
 import React from 'react';
-import { useEffect, useState, useHistory } from 'react';
-import { browserHistory } from 'react-router';
+import { useEffect, useState } from 'react';
 
 import DetailedCardLeft from '../../components/single-movie/card-left/DetailedCardLeft';
 import DetailedCardRight from '../../components/single-movie/card-right/DetailedCardRight';

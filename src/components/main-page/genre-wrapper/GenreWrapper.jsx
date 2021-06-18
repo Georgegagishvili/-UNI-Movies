@@ -1,5 +1,4 @@
-import GenreCard from '../../movie/genre-card/genreCard';
-function GenreWrapper({ title, onClick, children }) {
+function GenreWrapper({ title, children }) {
   return (
     <div className="genre-wrapper">
       <span>{title}</span>

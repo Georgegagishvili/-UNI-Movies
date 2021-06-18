@@ -1,4 +1,4 @@
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './genreStyle.css';
 
 function GenreCard({ genre, name, index }) {
@@ -11,6 +11,7 @@ function GenreCard({ genre, name, index }) {
               'invert(84%) sepia(26%) saturate(4612%) hue-rotate(3deg) brightness(105%) contrast(109%)',
           }}
           src={`${process.env.PUBLIC_URL}/icons/${genre}.svg`}
+          alt={name}
         />
 
         <span class="genre-name">{name}</span>

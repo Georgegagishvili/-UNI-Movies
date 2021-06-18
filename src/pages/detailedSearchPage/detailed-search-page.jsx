@@ -20,6 +20,7 @@ function DetailedSearchPage() {
     minimum_rating: 0,
     sort_by: 0,
     order_by: 0,
+    page: 1,
   });
 
   const filter = () => {
@@ -31,6 +32,7 @@ function DetailedSearchPage() {
     url += `&minimum_rating=${query.minimum_rating}`;
     url += `&sort_by=${query.sort_by}`;
     url += `&order_by=${query.order_by}`;
+    url += `&page=${query.page}`;
     window.location.replace(url.substring(1));
   };
 
@@ -42,6 +44,7 @@ function DetailedSearchPage() {
       minimum_rating: 0,
       sort_by: 0,
       order_by: 0,
+      page: 1,
     });
     window.location.replace('/search');
   };
@@ -70,6 +73,9 @@ function DetailedSearchPage() {
     if (urlParams.get('order_by')) {
       tmpQuery.order_by = urlParams.get('order_by');
     }
+    if (urlParams.get('page')) {
+      tmpQuery.page = urlParams.get('page');
+    }
 
     setQuery(tmpQuery);
     setMounted(true);
@@ -86,18 +92,25 @@ function DetailedSearchPage() {
         />
       </div>
       <div class="pagination">
-        <SearchPaging />
+        <SearchPaging
+          page_count={16}
+          query={query}
+          setQuery={setQuery}
+          filter={filter}
+        />
       </div>
       <div class="detailed-search-movie-body">
         {mounted && (
           <SearchMovieList
-            query={`query_term=${query.query_term}&quality=${
+            queryString={`query_term=${query.query_term}&quality=${
               qualitiesArray[query.quality]
             }&genre=${genresArray[query.genre]}&minimum_rating=${
               query.minimum_rating
             }&sort_by=${sortByArray[query.sort_by]}&order_by=${
               orderByArray[query.order_by]
-            }`}
+            }&page=${query.page}`}
+            query={query}
+            setQuery={setQuery}
           />
         )}
       </div>

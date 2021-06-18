@@ -19,6 +19,14 @@ function DetSearchHeader({ query, setQuery, filter, clear }) {
           <input
             defaultValue={query.query_term}
             onChange={({ target }) => updateQuery(target.value)}
+            onKeyUp={
+              ('keyup',
+              ({ key }) => {
+                if (key === 'Enter') {
+                  filter();
+                }
+              })
+            }
           />
           <button onClick={filter}>ძიება</button>
         </div>

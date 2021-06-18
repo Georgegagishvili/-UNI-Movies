@@ -1,10 +1,8 @@
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './movieCardStyle.css';
 
 function MovieCard({ movie }) {
-  let history = useHistory();
   const redirect = () => {
-    // history.push('/movie?id=' + movie.id);
     window.location.reload();
   };
   return (
@@ -16,7 +14,6 @@ function MovieCard({ movie }) {
         <span className="movie-single-category">
           {movie.genres && movie.genres.join(', ')}
         </span>
-
         <button className="movie-single-button" onClick={redirect}>
           <Link to={'/movie?id=' + movie.id} className="movie-single">
             სრულად ნახვა
