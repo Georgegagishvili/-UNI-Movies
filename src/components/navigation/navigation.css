@@ -19,21 +19,25 @@ a {
   height: 55px;
   background: #00203fff;
 }
-.logo {
+.nav-title img {
   height: 100%;
   width: 60px;
   color: white;
   margin: 0;
   padding: 10px;
-  color: #fed700;
-  margin-left: 7%;
 }
 .nav-title {
+  margin-left: 3%;
   height: auto;
   font-size: 24px;
   margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
-  font-family: 'BPG GLAHO WEB CAPS';
+  font-family: 'Staatliches', cursive;
+  font-weight: 900;
+  letter-spacing: 5px;
 }
 .nav-item {
   display: flex;
@@ -112,8 +116,11 @@ a {
   }
 }
 @media only screen and (max-width: 900px) {
-  .nav-title {
+  .nav-title a:nth-child(2) {
     display: none;
+  }
+  .nav-title img {
+    display: block !important;
   }
   .nav-search {
     margin-right: 0px;

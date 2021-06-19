@@ -8,38 +8,23 @@ function Navigation() {
   };
 
   return (
-    <nav class="navbar">
-      {/* <!-- LOGO --> */}
-      {/* <a href="index.html" class="logo">
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          data-prefix="fab"
-          data-icon="slack"
-          class="svg-inline--fa fa-slack fa-w-14"
-          role="img"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 448 512">
-          <path
-            fill="currentColor"
-            d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"></path>
-        </svg>
-      </a> */}
-      {/* <!-- LOGO --> */}
-      <ul class="navbar-ul">
-        {/* <!-- MAIN TITLE --> */}
-        <li class="nav-title">
+    <nav className="navbar">
+      <ul className="navbar-ul">
+        <li className="nav-title">
+          <a href="/">
+            <img src="https://pngimg.com/uploads/triangle/triangle_PNG30.png" />
+          </a>
           <Link to={'/'}>React Movies</Link>
         </li>
-        {/* <!-- MAIN TITLE --> */}
+        {/* <!-- MAIN TITLE -->
         {/* <!-- SEARCH --> */}
-        <li class="nav-search">
+        <li className="nav-search">
           <svg
             aria-hidden="true"
             focusable="false"
             data-prefix="fas"
             data-icon="search"
-            class="svg-inline--fa fa-search fa-w-16"
+            className="svg-inline--fa fa-search fa-w-16"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512">
@@ -61,24 +46,24 @@ function Navigation() {
             }
           />
           {/* <!-- HIDDEN SEARCH RESULTS --> */}
-          <ul id="searchResults" class="search-results-ul"></ul>
+          <ul id="searchResults" className="search-results-ul"></ul>
           {/* <!-- HIDDEN SEARCH RESULTS --> */}
         </li>
         {/* <!-- SEARCH --> */}
 
         {/* <!-- NAV ITEMS --> */}
-        <li class="nav-item">
-          <NavLink class="nav-link" to="/search">
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/search">
             ფილმები
           </NavLink>
         </li>
-        <li class="nav-item">
-          <NavLink class="nav-link" to="/movie?id=8462">
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/movie?id=8462">
             სურვილები
           </NavLink>
         </li>
-        <li class="nav-item">
-          <NavLink class="nav-link" to="/auth">
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/auth">
             ავტორიზაცია
           </NavLink>
         </li>
@@ -86,15 +71,15 @@ function Navigation() {
 
         {/* <!-- RESPONSIVE NAV ITEMS --> */}
 
-        <div class="navbar-responsive">
+        <div className="navbar-responsive">
           <li>
-            <a href="search_detailed.html">
+            <a href="/search">
               <svg
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fas"
                 data-icon="film"
-                class="svg-inline--fa fa-film fa-w-16"
+                className="svg-inline--fa fa-film fa-w-16"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512">
@@ -187,7 +172,7 @@ function Navigation() {
                 focusable="false"
                 data-prefix="fas"
                 data-icon="user-circle"
-                class="svg-inline--fa fa-user-circle fa-w-16"
+                className="svg-inline--fa fa-user-circle fa-w-16"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 496 512">

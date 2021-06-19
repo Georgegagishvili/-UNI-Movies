@@ -7,10 +7,22 @@ function Footer() {
         <footer>
           <div class="footer-top">
             <div class="top-texts">
-              <img src="https://bit.ly/3grEgKE" alt="logo" />
-              <img src="https://bit.ly/3grEgKE" alt="logo" />
-              <img src="https://bit.ly/3grEgKE" alt="logo" />
-              <img src="https://bit.ly/3grEgKE" alt="logo" />
+              <img
+                src="https://pngimg.com/uploads/triangle/triangle_PNG30.png"
+                alt="logo"
+              />
+              <img
+                src="https://pngimg.com/uploads/triangle/triangle_PNG30.png"
+                alt="logo"
+              />
+              <img
+                src="https://pngimg.com/uploads/triangle/triangle_PNG30.png"
+                alt="logo"
+              />
+              <img
+                src="https://pngimg.com/uploads/triangle/triangle_PNG30.png"
+                alt="logo"
+              />
             </div>
             <div class="middle-texts">
               <span>HOME</span>

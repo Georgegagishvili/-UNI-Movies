@@ -4,7 +4,7 @@ import './genreStyle.css';
 function GenreCard({ genre, name, index }) {
   return (
     <Link to={`/search?genre=${index}`}>
-      <div class="genre-single">
+      <div className="genre-single">
         <img
           style={{
             filter:
@@ -14,7 +14,7 @@ function GenreCard({ genre, name, index }) {
           alt={name}
         />
 
-        <span class="genre-name">{name}</span>
+        <span className="genre-name">{name}</span>
       </div>
     </Link>
   );
